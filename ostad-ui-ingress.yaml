@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ostad-ui-ingress
+  namespace: arafat-al-mahmud-ns
+spec:
+  rules:
+    - host: chat.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ostad-ui
+                port:
+                  number: 80

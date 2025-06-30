@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ostad-server
+  namespace: arafat-al-mahmud-ns
+spec:
+  selector:
+    app: ostad-server
+  ports:
+    - protocol: TCP
+      port: 5050
+      targetPort: 5050
